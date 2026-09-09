@@ -11,9 +11,9 @@
 ![Astro](https://img.shields.io/badge/Astro-7.2.0-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-blue)
 >
-> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
-[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
-[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/boringHub/blog/issues)
 > 
 > [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
 >
@@ -68,7 +68,7 @@
 >
 >**更多布局配置及演示请查看：[Firefly 布局系统详解](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)**
 >
->Firefly 支持 i18n 多语言 UI，但除了简体中文，其他语言均为 AI 翻译转换，如有错误，欢迎提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) 修正。
+>Firefly 支持 i18n 多语言 UI，但除了简体中文，其他语言均为 AI 翻译转换，如有错误，欢迎提交 [Pull Request](https://github.com/boringHub/blog/pulls) 修正。
 
 ## ✨ 功能特性
 
@@ -90,7 +90,7 @@
 - [x] **壁纸模式切换** - 横幅壁纸、全屏壁纸、全屏透明壁纸、纯色背景
 - [x] **主题色自定义** - 360° 色相调节
 
-如果你有好用的功能和优化，请提交 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)
+如果你有好用的功能和优化，请提交 [Pull Request](https://github.com/boringHub/blog/pulls)
 
 ## 🚀 快速开始
 
@@ -103,11 +103,11 @@
 
 1. **克隆仓库：**
    ```bash
-   git clone https://github.com/Cuteleaf/Firefly.git
+   git clone https://github.com/boringHub/blog.git
    cd Firefly
    ```
    
-   **先 [Fork](https://github.com/CuteLeaf/Firefly/fork) 到自己仓库再克隆（推荐），记得先点 Star 再 Fork 哦！**
+   **先 [Fork](https://github.com/boringHub/blog/fork) 到自己仓库再克隆（推荐），记得先点 Star 再 Fork 哦！**
 
    ```bash
    git clone https://github.com/you-github-name/Firefly.git
@@ -145,8 +145,8 @@
 
    安装命令： `pnpm install`
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/boringHub/blog&project-name=Firefly&repository-name=Firefly)
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/boringHub/blog)
 
 ## 📖 配置说明
 
@@ -296,15 +296,15 @@ location: China # 位置
 
 **版权声明：**
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
-- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly) 
+- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/boringHub/blog)
 
 根据 MIT 开源协议，你可以自由使用、修改、分发代码，但需保留上述版权声明。
 
 ## 🍀 贡献者
 
-感谢以下贡献者对本项目做出的贡献，如有问题或建议，请提交 [Issue](https://github.com/CuteLeaf/Firefly/issues) 或 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)。
+感谢以下贡献者对本项目做出的贡献，如有问题或建议，请提交 [Issue](https://github.com/boringHub/blog/issues) 或 [Pull Request](https://github.com/boringHub/blog/pulls)。
 
-><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
+><a href="https://github.com/boringHub/blog/graphs/contributors">
 >  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
 ></a>
 

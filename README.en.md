@@ -11,9 +11,9 @@
 ![Astro](https://img.shields.io/badge/Astro-7.2.0-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-blue)
 >
-> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
-[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
-[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/boringHub/blog/issues)
 > 
 > [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
 >
@@ -67,7 +67,7 @@
 >
 >**For more layout configurations and demos, please see: [Firefly Layout System Details](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)**
 >
->Firefly supports i18n multilingual UI, but except for Simplified Chinese, other languages are AI-translated. If you find any errors, feel free to submit a [Pull Request](https://github.com/CuteLeaf/Firefly/pulls) to help improve them.
+>Firefly supports i18n multilingual UI, but except for Simplified Chinese, other languages are AI-translated. If you find any errors, feel free to submit a [Pull Request](https://github.com/boringHub/blog/pulls) to help improve them.
 
 ## ✨ Features
 
@@ -90,7 +90,7 @@
 - [x] **Theme Color Customization** - 360° hue adjustment
 
 
-If you have useful features and optimizations, please submit a [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)
+If you have useful features and optimizations, please submit a [Pull Request](https://github.com/boringHub/blog/pulls)
 
 ## 🚀 Quick Start
 
@@ -103,11 +103,11 @@ If you have useful features and optimizations, please submit a [Pull Request](ht
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Cuteleaf/Firefly.git
+   git clone https://github.com/boringHub/blog.git
    cd Firefly
    ```
    
-   **First [Fork](https://github.com/CuteLeaf/Firefly/fork) to your own repository then clone (recommended). Don't forget to Star before Fork!**
+   **First [Fork](https://github.com/boringHub/blog/fork) to your own repository then clone (recommended). Don't forget to Star before Fork!**
 
    ```bash
    git clone https://github.com/you-github-name/Firefly.git
@@ -145,8 +145,8 @@ If you have useful features and optimizations, please submit a [Pull Request](ht
 
    Install Command: `pnpm install`
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/boringHub/blog&project-name=Firefly&repository-name=Firefly)
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/boringHub/blog)
 
 ## 📖 Configuration
 
@@ -297,15 +297,15 @@ Originally forked from [saicaca/fuwari](https://github.com/saicaca/fuwari). Than
 
 **Copyright Notice:**
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
-- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly)
+- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/boringHub/blog)
 
 Under the MIT license, you are free to use, modify, and distribute the code, but you must retain the above copyright notice.
 
 ## 🍀 Contributors
 
-Thanks to the following contributors for their contributions to this project. If you have any questions or suggestions, please submit an [Issue](https://github.com/CuteLeaf/Firefly/issues) or [Pull Request](https://github.com/CuteLeaf/Firefly/pulls).
+Thanks to the following contributors for their contributions to this project. If you have any questions or suggestions, please submit an [Issue](https://github.com/boringHub/blog/issues) or [Pull Request](https://github.com/boringHub/blog/pulls).
 
-><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
+><a href="https://github.com/boringHub/blog/graphs/contributors">
 >  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
 ></a>
 

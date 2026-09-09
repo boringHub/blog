@@ -11,9 +11,9 @@
 ![Astro](https://img.shields.io/badge/Astro-7.2.0-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-blue)
 >
-> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
-[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
-[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/boringHub/blog/issues)
 > 
 > [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
 >
@@ -68,7 +68,7 @@
 >
 >**レイアウト設定とデモの詳細については、[Firefly レイアウトシステム詳解](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)をご覧ください**
 >
->Firefly は i18n の多言語 UI をサポートしていますが、簡体字中国語以外の言語は AI 翻訳です。誤りがある場合は、[Pull Request](https://github.com/CuteLeaf/Firefly/pulls) の提出を歓迎します。
+>Firefly は i18n の多言語 UI をサポートしていますが、簡体字中国語以外の言語は AI 翻訳です。誤りがある場合は、[Pull Request](https://github.com/boringHub/blog/pulls) の提出を歓迎します。
 
 ## ✨ 機能
 
@@ -91,7 +91,7 @@
 - [x] **テーマカラーのカスタマイズ** - 360° 色相調整
 
 
-便利な機能や最適化があれば、[Pull Request](https://github.com/CuteLeaf/Firefly/pulls)を提出してください
+便利な機能や最適化があれば、[Pull Request](https://github.com/boringHub/blog/pulls)を提出してください
 
 ## 🚀 クイックスタート
 
@@ -104,11 +104,11 @@
 
 1. **リポジトリのクローン：**
    ```bash
-   git clone https://github.com/Cuteleaf/Firefly.git
+   git clone https://github.com/boringHub/blog.git
    cd Firefly
    ```
    
-   **まず自分のリポジトリに[Fork](https://github.com/CuteLeaf/Firefly/fork)してからクローン（推奨）。クローンする前に Star をクリックするのを忘れずに！**
+   **まず自分のリポジトリに[Fork](https://github.com/boringHub/blog/fork)してからクローン（推奨）。クローンする前に Star をクリックするのを忘れずに！**
 
    ```bash
    git clone https://github.com/you-github-name/Firefly.git
@@ -146,8 +146,8 @@
 
    インストールコマンド： `pnpm install`
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/boringHub/blog&project-name=Firefly&repository-name=Firefly)
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/boringHub/blog)
 
 ## 📖 設定説明
 
@@ -297,15 +297,15 @@ Astro がデフォルトで対応している[GitHub Flavored Markdown](https://
 
 **著作権表示：**
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
-- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly)
+- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/boringHub/blog)
 
 MIT ライセンスに基づき、コードの自由な使用、変更、配布が許可されていますが、上記の著作権表示を保持する必要があります。
 
 ## 🍀 貢献者
 
-このプロジェクトに貢献してくれた以下の貢献者に感謝します。質問や提案がある場合は、[Issue](https://github.com/CuteLeaf/Firefly/issues)または[Pull Request](https://github.com/CuteLeaf/Firefly/pulls)を提出してください。
+このプロジェクトに貢献してくれた以下の貢献者に感謝します。質問や提案がある場合は、[Issue](https://github.com/boringHub/blog/issues)または[Pull Request](https://github.com/boringHub/blog/pulls)を提出してください。
 
-><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
+><a href="https://github.com/boringHub/blog/graphs/contributors">
 >  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
 ></a>
 

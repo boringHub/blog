@@ -11,9 +11,9 @@
 ![Astro](https://img.shields.io/badge/Astro-7.2.0-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-6.0.3-blue)
 >
-> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
-[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/network/members)
-[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/CuteLeaf/Firefly/issues)
+> [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/stargazers)
+[![Forks](https://img.shields.io/github/forks/CuteLeaf/Firefly?style=social)](https://github.com/boringHub/blog/network/members)
+[![Issues](https://img.shields.io/github/issues/CuteLeaf/Firefly)](https://github.com/boringHub/blog/issues)
 >
 > [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z41NQALY)
 >
@@ -67,7 +67,7 @@
 >
 >**더 많은 레이아웃 구성과 데모는 [Firefly 레이아웃 시스템 상세 안내](https://firefly.cuteleaf.cn/posts/guide/firefly-layout-system/)를 확인해 주세요.**
 >
->Firefly는 i18n 다국어 UI를 지원하지만, 중국어 간체를 제외한 언어는 AI로 번역되었습니다. 오류를 발견하면 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)를 보내 개선에 참여해 주세요.
+>Firefly는 i18n 다국어 UI를 지원하지만, 중국어 간체를 제외한 언어는 AI로 번역되었습니다. 오류를 발견하면 [Pull Request](https://github.com/boringHub/blog/pulls)를 보내 개선에 참여해 주세요.
 
 ## ✨ 기능
 
@@ -90,7 +90,7 @@
 - [x] **테마 색상 사용자 지정** - 360° 색조 조절
 
 
-유용한 기능이나 개선 사항이 있다면 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)를 보내 주세요.
+유용한 기능이나 개선 사항이 있다면 [Pull Request](https://github.com/boringHub/blog/pulls)를 보내 주세요.
 
 ## 🚀 빠른 시작
 
@@ -103,11 +103,11 @@
 
 1. **저장소 복제:**
    ```bash
-   git clone https://github.com/CuteLeaf/Firefly.git
+   git clone https://github.com/boringHub/blog.git
    cd Firefly
    ```
 
-   **먼저 자신의 저장소로 [Fork](https://github.com/CuteLeaf/Firefly/fork)한 다음 복제하는 것을 권장합니다. Fork 전에 Star를 누르는 것도 잊지 마세요!**
+   **먼저 자신의 저장소로 [Fork](https://github.com/boringHub/blog/fork)한 다음 복제하는 것을 권장합니다. Fork 전에 Star를 누르는 것도 잊지 마세요!**
 
    ```bash
    git clone https://github.com/you-github-name/Firefly.git
@@ -145,8 +145,8 @@
 
    설치 명령: `pnpm install`
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/CuteLeaf/Firefly&project-name=Firefly&repository-name=Firefly)
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/CuteLeaf/Firefly)
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/boringHub/blog&project-name=Firefly&repository-name=Firefly)
+   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/boringHub/blog)
 
 ## 📖 구성 안내
 
@@ -297,15 +297,15 @@ Firefly 관련 이미지 에셋의 저작권은 게임 ["붕괴: 스타레일"](
 
 **저작권 고지:**
 - Copyright (c) 2024 [saicaca](https://github.com/saicaca) - [fuwari](https://github.com/saicaca/fuwari)
-- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/CuteLeaf/Firefly)
+- Copyright (c) 2025 [CuteLeaf](https://github.com/CuteLeaf) - [Firefly](https://github.com/boringHub/blog)
 
 MIT 라이선스에 따라 코드를 자유롭게 사용, 수정 및 배포할 수 있지만 위 저작권 고지는 반드시 유지해야 합니다.
 
 ## 🍀 기여자
 
-이 프로젝트에 기여해 주신 모든 분께 감사드립니다. 질문이나 제안이 있다면 [Issue](https://github.com/CuteLeaf/Firefly/issues) 또는 [Pull Request](https://github.com/CuteLeaf/Firefly/pulls)를 보내 주세요.
+이 프로젝트에 기여해 주신 모든 분께 감사드립니다. 질문이나 제안이 있다면 [Issue](https://github.com/boringHub/blog/issues) 또는 [Pull Request](https://github.com/boringHub/blog/pulls)를 보내 주세요.
 
-><a href="https://github.com/CuteLeaf/Firefly/graphs/contributors">
+><a href="https://github.com/boringHub/blog/graphs/contributors">
 >  <img src="https://contrib.rocks/image?repo=CuteLeaf/Firefly" />
 ></a>
 
