@@ -1,0 +1,86 @@
+---
+import WidgetLayout from "@/components/common/WidgetLayout.astro";
+import { galleryConfig, siteConfig } from "@/config";
+import { Icon } from "astro-icon/components";
+import type { WidgetComponentConfig } from "@/types/config";
+import { getAlbumCover, scanAlbumPhotos } from "@/utils/gallery-utils";
+import { url } from "@/utils/url-utils";
+
+interface Props {
+	class?: string;
+	style?: string;
+	widgetConfig?: WidgetComponentConfig;
+}
+
+const { class: className, style, widgetConfig } = Astro.props;
+const showTitle = widgetConfig?.showTitle !== false;
+const albums = galleryConfig.albums
+	.map((album) => {
+		const photos = scanAlbumPhotos(album.id);
+		return {
+			...album,
+			cover: getAlbumCover(album, photos),
+			photoCount: photos.length,
+		};
+	})
+	.slice(0, 3);
+---
+
+{siteConfig.pages.gallery && (
+  <WidgetLayout
+    name="最新相册"
+    showTitle={showTitle}
+    id="latest-gallery"
+    class={className}
+    style={style}
+  >
+    {albums.length > 0 ? (
+      <div class="flex flex-col gap-3">
+        {albums.map((album) => (
+          <a
+            href={url(`/gallery/${album.id}/`)}
+            class="group flex items-center gap-3 rounded-lg p-1 transition hover:bg-(--btn-plain-bg-hover)"
+          >
+            {album.cover ? (
+              <img
+                src={album.cover}
+                alt={album.name}
+                class="size-14 shrink-0 rounded-lg object-cover transition group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <span class="flex size-14 shrink-0 items-center justify-center rounded-lg bg-(--card-bg) text-(--primary)">
+                <Icon name="material-symbols:photo-library" class="text-2xl" />
+              </span>
+            )}
+            <span class="min-w-0">
+              <span class="block truncate text-sm font-medium text-neutral-700 group-hover:text-(--primary) dark:text-neutral-300">
+                {album.name}
+              </span>
+              <span class="mt-1 block text-xs text-neutral-500 dark:text-neutral-400">
+                {album.photoCount} 张图片
+              </span>
+            </span>
+          </a>
+        ))}
+        <a
+          class="btn-plain mt-1 flex items-center justify-center gap-1 rounded-lg p-1.5 text-sm text-(--primary)"
+          href={url("/gallery/")}
+        >
+          <Icon name="material-symbols:photo-library" class="size-4.5" aria-hidden="true" />
+          <span>查看全部相册</span>
+          <Icon name="material-symbols:arrow-forward-rounded" class="size-4" aria-hidden="true" />
+        </a>
+      </div>
+    ) : (
+      <a
+        class="btn-plain flex items-center justify-center gap-1 rounded-lg p-1.5 text-sm text-(--primary)"
+        href={url("/gallery/")}
+      >
+        <Icon name="material-symbols:photo-library" class="size-4.5" aria-hidden="true" />
+        <span>查看相册</span>
+      </a>
+    )}
+  </WidgetLayout>
+)}
