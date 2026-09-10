@@ -53,6 +53,11 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 项目独立入口
 	links.push(LinkPresets.Projects);
 
+	// 动态、相册和工具箱入口
+	links.push(LinkPresets.Dynamic);
+	links.push(LinkPresets.Gallery);
+	links.push(LinkPresets.Booknav);
+
 	// 关于及其子菜单
 	links.push({
 		name: "关于",

@@ -5,6 +5,8 @@ export type BooknavItem = {
 	title: string; // 书签标题
 	url: string; // 书签地址
 	desc?: string; // 书签描述
+	tags?: string[]; // 用于搜索和筛选的标签
+	type?: "external" | "internal"; // 链接类型，默认 external
 	// 图标，留空则自动获取目标站点的 favicon
 	// 支持三种写法：
 	// 1. 网络图片：https://example.com/logo.png
@@ -13,6 +15,22 @@ export type BooknavItem = {
 	icon?: string;
 	weight?: number; // 组内权重，数字越大排序越靠前，默认 0
 	enabled?: boolean; // 是否启用，默认 true
+};
+
+export type PersonalBooknavItem = {
+	id: string;
+	title: string;
+	url: string;
+	desc?: string;
+	icon?: string;
+	group?: string;
+	createdAt: number;
+	updatedAt: number;
+};
+
+export type PersonalBooknavStore = {
+	version: 1;
+	items: PersonalBooknavItem[];
 };
 
 // 书签分组
@@ -33,9 +51,17 @@ export type BooknavFaviconConfig = {
 	api: string;
 };
 
+export type BooknavPersonalConfig = {
+	enabled: boolean;
+	storageKey: string;
+	maxItems: number;
+	enableImportExport: boolean;
+};
+
 // 书签导航页面配置
 export type BooknavPageConfig = {
 	title?: string; // 页面标题，留空则使用 i18n 中的翻译
 	description?: string; // 页面描述，留空则使用 i18n 中的翻译
 	favicon: BooknavFaviconConfig; // favicon 自动获取配置
+	personal?: BooknavPersonalConfig;
 };

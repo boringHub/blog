@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import PersonalBooknav from "@/components/booknav/PersonalBooknav.svelte";
 import { booknavPageConfig, siteConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
@@ -31,6 +32,7 @@ const resolvedGroups = groups.map((group) => ({
 }));
 
 const totalCount = resolvedGroups.reduce((sum, g) => sum + g.items.length, 0);
+const publicItems = resolvedGroups.flatMap((group) => group.items);
 
 // 页面标题和描述
 const title = booknavPageConfig.title || i18n(I18nKey.booknav);
@@ -63,6 +65,18 @@ const description =
           )
         }
       </div>
+
+      {
+        booknavPageConfig.personal?.enabled && (
+          <PersonalBooknav
+            client:load
+            items={publicItems}
+            storageKey={booknavPageConfig.personal.storageKey}
+            maxItems={booknavPageConfig.personal.maxItems}
+            enableImportExport={booknavPageConfig.personal.enableImportExport}
+          />
+        )
+      }
 
       {
         totalCount > 0 ? (
@@ -136,6 +150,7 @@ const description =
                         data-title={item.title.toLowerCase()}
                         data-desc={(item.desc || "").toLowerCase()}
                         data-domain={item.domain.toLowerCase()}
+                        data-tags={(item.tags || []).join(" ").toLowerCase()}
                         class="booknav-card group flex items-center gap-3 p-3 rounded-xl border border-(--line-divider) hover:border-(--primary) hover:bg-(--card-bg) transition-all duration-300 hover:shadow-lg relative overflow-hidden"
                       >
                         {/* 背景装饰 - 仅悬停显示 */}
@@ -279,7 +294,8 @@ const description =
                 !query ||
                 (card.dataset.title || "").includes(query) ||
                 (card.dataset.desc || "").includes(query) ||
-                (card.dataset.domain || "").includes(query);
+                (card.dataset.domain || "").includes(query) ||
+                (card.dataset.tags || "").includes(query);
 
               if (match) {
                 card.style.display = "";

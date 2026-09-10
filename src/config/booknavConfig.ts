@@ -3,10 +3,17 @@ import type { BooknavGroup, BooknavPageConfig } from "../types/booknavConfig";
 // 书签导航页面配置
 export const booknavPageConfig: BooknavPageConfig = {
 	// 页面标题，如果留空则使用 i18n 中的翻译
-	title: "",
+	title: "工具箱",
 
 	// 页面描述文本，如果留空则使用 i18n 中的翻译
-	description: "",
+	description: "收集常用网站、在线工具和个人快捷入口。",
+
+	personal: {
+		enabled: true,
+		storageKey: "boringhub:booknav:personal",
+		maxItems: 100,
+		enableImportExport: true,
+	},
 
 	// favicon 自动获取配置
 	favicon: {
