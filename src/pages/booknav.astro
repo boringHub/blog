@@ -151,10 +151,11 @@ const description =
                         data-desc={(item.desc || "").toLowerCase()}
                         data-domain={item.domain.toLowerCase()}
                         data-tags={(item.tags || []).join(" ").toLowerCase()}
-                        class="booknav-card group flex items-center gap-3 p-3 rounded-xl border border-(--line-divider) hover:border-(--primary) hover:bg-(--card-bg) transition-all duration-300 hover:shadow-lg relative overflow-hidden"
+                        aria-label={`${item.title}：${item.desc || item.domain}`}
+                        class="booknav-card group flex items-center gap-3 p-3 rounded-xl border border-(--line-divider) hover:border-(--primary) hover:bg-(--card-bg) transition-all duration-300 hover:shadow-lg relative"
                       >
                         {/* 背景装饰 - 仅悬停显示 */}
-                        <div class="absolute inset-0 bg-(--primary) opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
+                        <div class="absolute inset-0 rounded-xl bg-(--primary) opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none" />
 
                         {/* 图标 */}
                         <div
@@ -338,6 +339,7 @@ const description =
     .booknav-group {
       scroll-margin-top: 5.5rem;
     }
+
 
     /* 图标缺失时的首字母兜底样式 */
     .booknav-letter {

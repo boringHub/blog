@@ -4,11 +4,35 @@ import {
 	type NavBarSearchConfig,
 	NavBarSearchMethod,
 } from "../types/navBarConfig";
+import { booknavConfig } from "./booknavConfig";
 
 // ============================================================================
 // 导航栏配置 - 根据顺序动态生成导航栏链接
 // NavBar Configuration - Dynamically generate navigation bar links based on order
 // ============================================================================
+const getBooknavPreviewIcon = (icon?: string): string => {
+	if (icon && /^[\w-]+:[\w-]+$/.test(icon)) return icon;
+	return "material-symbols:language-rounded";
+};
+
+const getBooknavMegaMenu = () =>
+	booknavConfig
+		.filter((group) => group.enabled !== false)
+		.map((group) => ({
+			name: group.name,
+			icon: group.icon,
+			items: group.items
+				.filter((item) => item.enabled !== false)
+				.slice(0, 5)
+				.map((item) => ({
+					name: item.title,
+					url: item.url,
+					external: true,
+					icon: getBooknavPreviewIcon(item.icon),
+				})),
+		}))
+		.filter((group) => group.items.length > 0);
+
 const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 基础导航栏链接
 	const links: NavBarLink[] = [];
@@ -53,10 +77,11 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 项目独立入口
 	links.push(LinkPresets.Projects);
 
-	// 动态、相册和工具箱入口
-	links.push(LinkPresets.Dynamic);
-	links.push(LinkPresets.Gallery);
-	links.push(LinkPresets.Booknav);
+	// 工具箱入口，悬浮时展示宽大的分类菜单
+	links.push({
+		...LinkPresets.Booknav,
+		megaMenu: getBooknavMegaMenu(),
+	});
 
 	// 关于及其子菜单
 	links.push({
@@ -87,7 +112,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			},
 			{
 				name: "邮箱",
-				url: "mailto:1873890385@qq.com",
+				url: "mailto:lijiapeng-email@304766.xyz",
 				external: true,
 				icon: "fa7-solid:envelope",
 			},
@@ -171,7 +196,7 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		pageKey: "gallery",
 	},
 	Booknav: {
-		name: "书签导航",
+		name: "书签",
 		url: "/booknav/",
 		icon: "material-symbols:bookmarks",
 		pageKey: "booknav",

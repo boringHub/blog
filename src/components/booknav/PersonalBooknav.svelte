@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Icon } from "astro-icon/components";
+	import Icon from "@/components/common/Icon.svelte";
 	import type { BooknavItem, PersonalBooknavItem } from "@/types/booknavConfig";
 	import {
 		createPersonalBooknavItem,
@@ -155,15 +155,15 @@
     <div class="flex flex-wrap gap-2">
       {#if enableImportExport}
         <button class="booknav-action" type="button" onclick={exportItems} title="导出收藏">
-          <Icon name="material-symbols:download-rounded" /> 导出
+          <Icon icon="material-symbols:download-rounded" /> 导出
         </button>
         <label class="booknav-action cursor-pointer" title="导入收藏">
-          <Icon name="material-symbols:upload-rounded" /> 导入
+          <Icon icon="material-symbols:upload-rounded" /> 导入
           <input class="hidden" type="file" accept="application/json,.json" onchange={importItems} />
         </label>
       {/if}
       <button class="booknav-action booknav-action-primary" type="button" onclick={() => openEditor()}>
-        <Icon name="material-symbols:add-rounded" /> 添加
+        <Icon icon="material-symbols:add-rounded" /> 添加
       </button>
     </div>
   </div>
@@ -181,7 +181,7 @@
   </div>
 
   <div class="relative mb-4">
-    <Icon name="material-symbols:search-rounded" class="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
+    <Icon icon="material-symbols:search-rounded" class="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400" />
     <input bind:value={query} class="w-full rounded-xl border border-(--line-divider) bg-transparent py-2.5 pl-10 pr-4 text-sm outline-none focus:border-(--primary)" placeholder="搜索快捷访问" type="search" />
   </div>
 
@@ -194,8 +194,8 @@
             <span class="block truncate text-xs text-neutral-500 dark:text-neutral-400">{item.desc || item.url}</span>
           </a>
           <div class="flex shrink-0 gap-1">
-            <button class="booknav-icon-button" type="button" title="编辑" onclick={() => openEditor(item.id)}><Icon name="material-symbols:edit-outline-rounded" /></button>
-            <button class="booknav-icon-button" type="button" title="删除" onclick={() => removeItem(item.id)}><Icon name="material-symbols:delete-outline-rounded" /></button>
+            <button class="booknav-icon-button" type="button" title="编辑" onclick={() => openEditor(item.id)}><Icon icon="material-symbols:edit-outline-rounded" /></button>
+            <button class="booknav-icon-button" type="button" title="删除" onclick={() => removeItem(item.id)}><Icon icon="material-symbols:delete-outline-rounded" /></button>
           </div>
         </article>
       {:else}
@@ -210,7 +210,7 @@
       <form class="booknav-editor" onsubmit={saveItem}>
         <div class="flex items-center justify-between gap-3 mb-4">
           <h3 class="text-lg font-bold">{editing ? "编辑快捷访问" : "添加快捷访问"}</h3>
-          <button class="booknav-icon-button" type="button" title="关闭" onclick={() => (showEditor = false)}><Icon name="material-symbols:close-rounded" /></button>
+          <button class="booknav-icon-button" type="button" title="关闭" onclick={() => (showEditor = false)}><Icon icon="material-symbols:close-rounded" /></button>
         </div>
         <label>名称<input name="title" required value={editing?.title || ""} /></label>
         <label>网址<input name="url" required type="url" placeholder="https://example.com" value={editing?.url || ""} /></label>

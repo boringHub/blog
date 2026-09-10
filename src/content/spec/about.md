@@ -7,6 +7,6 @@
 
 这里主要记录我的技术学习、生活思考和成长过程。希望通过持续写作，把遇到的问题、积累的经验和一些值得分享的内容整理下来。
 
-你可以通过 [GitHub](https://github.com/boringHub/blog) 了解博客项目，也可以通过邮箱 `1873890385@qq.com` 联系我。
+你可以通过 [GitHub](https://github.com/boringHub/blog) 了解博客项目，也可以通过邮箱 `lijiapeng-email@304766.xyz` 联系我。
 
 感谢你的访问，愿我们都能在自己的节奏里持续学习，认真生活。

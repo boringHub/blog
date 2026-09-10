@@ -139,6 +139,36 @@ export const booknavConfig: BooknavGroup[] = [
 		],
 	},
 	{
+		id: "community",
+		name: "社区",
+		icon: "material-symbols:forum-outline-rounded",
+		desc: "交流、社区与开发者服务",
+		weight: 80,
+		items: [
+			{
+				title: "Linux.do",
+				url: "https://linux.do",
+				desc: "面向开发者的技术交流社区",
+				tags: ["社区", "开发", "论坛"],
+				weight: 10,
+			},
+			{
+				title: "Linux.do Credit",
+				url: "https://credit.linux.do",
+				desc: "Linux.do 社区信用与积分服务",
+				tags: ["社区", "信用", "积分"],
+				weight: 9,
+			},
+			{
+				title: "Linux.do Connect",
+				url: "https://connect.linux.do",
+				desc: "Linux.do 社区连接与认证服务",
+				tags: ["社区", "认证", "Connect"],
+				weight: 8,
+			},
+		],
+	},
+	{
 		id: "resources",
 		name: "资源",
 		icon: "material-symbols:auto-stories-outline-rounded",
