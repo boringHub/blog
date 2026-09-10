@@ -169,6 +169,39 @@ export const booknavConfig: BooknavGroup[] = [
 		],
 	},
 	{
+		id: "relay",
+		name: "中转站",
+		icon: "material-symbols:alt-route-rounded",
+		desc: "API 服务与中转平台",
+		weight: 75,
+		items: [
+			{
+				title: "咕咕嘎嘎 中转站",
+				url: "https://api.fengshao1227.com",
+				desc: "AI API 中转服务平台",
+				weight: 10,
+			},
+			{
+				title: "Sole API",
+				url: "https://soleapi.com",
+				desc: "API 中转与服务接入平台",
+				weight: 9,
+			},
+			{
+				title: "OOIOO",
+				url: "https://ooioo.work",
+				desc: "API 中转与服务平台",
+				weight: 8,
+			},
+			{
+				title: "随想 API",
+				url: "https://sui-xiang.com",
+				desc: "AI 模型中转与服务平台",
+				weight: 7,
+			},
+		],
+	},
+	{
 		id: "resources",
 		name: "资源",
 		icon: "material-symbols:auto-stories-outline-rounded",

@@ -48,7 +48,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "记录思考，分享生活",
 
 	// 站点 URL
-	site_url: "https://304766.xyz",
+	site_url: "https://blog.304766.xyz",
 
 	// 站点描述
 	description:

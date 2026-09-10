@@ -45,8 +45,8 @@ const description =
     class="flex w-full rounded-(--radius-large) overflow-hidden relative min-h-32"
   >
     <div class="card-base z-10 px-9 py-6 relative w-full">
-      <!-- 页面标题和描述 -->
-      <div class="mb-4">
+      {/* 页面标题和描述 */}
+      <div class="mb-6">
         <div class="flex items-center gap-3 mb-3">
           <div
             class="h-8 w-8 rounded-lg bg-(--primary) flex items-center justify-center text-white dark:text-black/70"
@@ -65,18 +65,6 @@ const description =
           )
         }
       </div>
-
-      {
-        booknavPageConfig.personal?.enabled && (
-          <PersonalBooknav
-            client:load
-            items={publicItems}
-            storageKey={booknavPageConfig.personal.storageKey}
-            maxItems={booknavPageConfig.personal.maxItems}
-            enableImportExport={booknavPageConfig.personal.enableImportExport}
-          />
-        )
-      }
 
       {
         totalCount > 0 ? (
@@ -215,6 +203,20 @@ const description =
           <div class="flex flex-col items-center justify-center py-16 text-neutral-400 dark:text-neutral-500">
             <Icon name="material-symbols:bookmarks" class="text-6xl mb-4 opacity-50" />
             <p class="text-lg">{i18n(I18nKey.booknavEmpty)}</p>
+          </div>
+        )
+      }
+
+      {
+        booknavPageConfig.personal?.enabled && (
+          <div class="mt-12 pt-8 border-t border-(--line-divider)">
+            <PersonalBooknav
+              client:load
+              items={publicItems}
+              storageKey={booknavPageConfig.personal.storageKey}
+              maxItems={booknavPageConfig.personal.maxItems}
+              enableImportExport={booknavPageConfig.personal.enableImportExport}
+            />
           </div>
         )
       }

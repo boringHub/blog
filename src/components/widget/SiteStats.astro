@@ -108,10 +108,28 @@ const stats = [
 		dynamic: true,
 		id: "last-update",
 	},
+	{
+		icon: "material-symbols:visibility-outline-rounded",
+		label: "总访问人数",
+		value: 0, // 将由客户端更新
+		dynamic: true,
+		id: "busuanzi-uv",
+	},
+	{
+		icon: "material-symbols:bar-chart-outline-rounded",
+		label: "总访问次数",
+		value: 0, // 将由客户端更新
+		dynamic: true,
+		id: "busuanzi-pv",
+	},
 ];
 ---
 
 <WidgetLayout name={i18n(I18nKey.siteStats)} showTitle={showTitle} id="site-stats" class={className} style={style}>
+  <!-- busuanzi 隐藏元素，用于存储统计数据 -->
+  <span id="busuanzi_value_site_uv" style="display: none;"></span>
+  <span id="busuanzi_value_site_pv" style="display: none;"></span>
+
   <div class="flex flex-col gap-2">
     {stats.map((stat) => (
       <div class="flex items-center justify-between px-3 py-1.5">
@@ -181,12 +199,88 @@ const stats = [
   // 页面加载时更新
   updateDynamicStats();
 
+  // 加载 busuanzi 统计服务
+  function loadBusuanzi() {
+    // 检查是否已经加载过
+    if (window.busuanziLoaded) return;
+
+    // 创建 script 元素
+    const script = document.createElement('script');
+    script.src = 'https://busuanzi.icodeq.com/busuanzi.pure.mini.js';
+    script.async = true;
+
+    script.onload = function() {
+      window.busuanziLoaded = true;
+      // 等待 busuanzi 数据加载完成
+      setTimeout(updateBusuanziStats, 1000);
+    };
+
+    script.onerror = function() {
+      console.warn('busuanzi 加载失败，使用默认值');
+      const uvElements = document.querySelectorAll('[data-stat-id="busuanzi-uv"]');
+      const pvElements = document.querySelectorAll('[data-stat-id="busuanzi-pv"]');
+
+      uvElements.forEach((element) => {
+        element.textContent = '-';
+      });
+      pvElements.forEach((element) => {
+        element.textContent = '-';
+      });
+    };
+
+    document.head.appendChild(script);
+  }
+
+  // 更新 busuanzi 统计数据
+  function updateBusuanziStats() {
+    // 获取 busuanzi 的数据
+    const busuanziUv = document.getElementById('busuanzi_value_site_uv');
+    const busuanziPv = document.getElementById('busuanzi_value_site_pv');
+
+    const uvElements = document.querySelectorAll('[data-stat-id="busuanzi-uv"]');
+    const pvElements = document.querySelectorAll('[data-stat-id="busuanzi-pv"]');
+
+    // 格式化数字（添加千位分隔符）
+    function formatNumber(num) {
+      if (num === undefined || num === null || num === '') return '-';
+      const parsed = parseInt(num);
+      if (isNaN(parsed)) return '-';
+      return parsed.toLocaleString();
+    }
+
+    // 更新总访问人数（UV）
+    if (busuanziUv && busuanziUv.textContent) {
+      uvElements.forEach((element) => {
+        element.textContent = formatNumber(busuanziUv.textContent);
+      });
+    } else {
+      uvElements.forEach((element) => {
+        element.textContent = '-';
+      });
+    }
+
+    // 更新总访问次数（PV）
+    if (busuanziPv && busuanziPv.textContent) {
+      pvElements.forEach((element) => {
+        element.textContent = formatNumber(busuanziPv.textContent);
+      });
+    } else {
+      pvElements.forEach((element) => {
+        element.textContent = '-';
+      });
+    }
+  }
+
+  // 加载 busuanzi
+  loadBusuanzi();
+
   // 防止 Swup 切页重跑脚本时重复注册监听器
   if (!window.__siteStatsInit) {
     window.__siteStatsInit = true;
     // 页面切换时重新更新
     document.addEventListener("swup:contentReplaced", () => {
       setTimeout(updateDynamicStats, 100);
+      setTimeout(updateBusuanziStats, 500);
     });
   }
 </script>

@@ -8,7 +8,7 @@ link:
   - label: Gitee
     icon: fa7-brands:gitee
     value: https://gitee.com/springboot-petlink
-status: 进行中
+status: 已结束
 lang: zh_CN
 ---
 
