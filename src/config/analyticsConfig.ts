@@ -13,6 +13,10 @@ export const analyticsConfig: AnalyticsConfig = {
 		scriptUrl: "https://cloud.umami.is/script.js",
 		// Umami 会话回放脚本地址，支持使用自建
 		replaysScriptUrl: "https://cloud.umami.is/recorder.js",
+		// Umami API 地址，用于在站点统计卡片中展示 PV/UV，例如 "https://cloud.umami.is"
+		statsApiUrl: "",
+		// Umami API Token，在 Umami 后台「Profile → API keys」生成
+		apiToken: "",
 		// 是否追踪出站链接
 		trackOutboundLinks: true,
 		// 是否收集浏览器性能指标

@@ -7,6 +7,8 @@ export type AnalyticsConfig = {
 		replaysScriptUrl?: string; // Umami 会话回放脚本地址
 		trackOutboundLinks?: boolean; // 是否追踪出站链接点击事件，默认 true
 		collectWebVitals?: boolean; // 是否自动收集访客浏览器核心网页指标，默认 false
+		statsApiUrl?: string; // Umami API 地址，用于获取 PV/UV 统计，例如 "https://umami.example.com"
+		apiToken?: string; // Umami API Token，在 Umami 后台「Profile → API keys」生成
 		replays?: {
 			enabled?: boolean; // 是否启用会话回放，默认 false
 			sampleRate?: number; // 录制会话采样率，范围 0-1，默认 0.15
